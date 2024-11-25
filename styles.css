@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header.nav {
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo h2 {
+    font-size: 34px;
+    color: #61dafb;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+header ul li a:hover, header ul li a.active {
+    background-color: #61dafb;
+    border-radius: 5px;
+}
+
+section {
+    padding: 100px 20px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.Home {
+    background: linear-gradient(to right, #283048, #859398);
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Home h1, .Home h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.coontainer img{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.home_container{
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(57, 185, 185);
+
+}
+.home_container:hover, .home_container.active{
+    background-color: black;
+    border-radius: 5px;
+}
+.Home h2 span {
+    color: #61dafb;
+}
+
+.container_about, .container-skills, .container-projects, .container-contacts {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container-skills ul, .container-projects ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.projects, .skills, .contact {
+    background-color: #fff;
+    padding: 50px 0;
+    margin-top: 20px;
+}
+
+.projects ul li, .skills ul li {
+    font-size: 18px;
+}
+
+.contact img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+.contact img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    color:aqua;
+}

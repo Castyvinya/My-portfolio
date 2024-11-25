@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fabian Portfolio</title>
+        
+        <!--styling my portfolio website-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="nav">
+            <div class="logo">
+                <h2>Fabian</h2>
+            </div>
+            <ul>
+                <li><a href="#Home" class="nav-link" aria-current="page">Home</a></li>
+                <li><a href="#About" class="nav-link">About me</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contacts</a></li>
+            </ul>
+        </header>
+
+        <!--Home section-->
+        <section id="Home" class="Home">
+            <div class="container">
+                <div class="home_container">
+                    <h4>Welcome to my Portfolio</h4>
+                </div>
+                <h1>FABIAN MUSAU</h1>
+                <h2><span>S</span>oftware <span>D</span>eveloper</h2>
+                <p>I am a Software and Web developer based in Nairobi, Kenya.</p>
+                <p>I am passionate about developing user-friendly websites for both commercial and personal use.</p>
+            </div>
+        </section>
+
+        <!--About section-->
+        <section class="About" id="About">
+            <div class="container_about">
+                <h1>ABOUT ME</h1>
+                <p><b>I am a tech-enthusiast who has developed web applications, designed, and implemented APIs for data integration.</b></p>
+                <p>I have collaborated with cross-functional teams to deliver high-quality software and web solutions, helping different users in their daily lives.</p>
+                
+                <h2>Education</h2>
+                <ul>
+                    <li><b>University:</b> Karatina University</li>
+                    <li><b>Course:</b> Bachelor of Computer Science</li>
+                    <li><b>Level:</b> 2.1 (Junior)</li>
+                </ul>
+
+                <h2>Experience</h2>
+                <ul>
+                    <li><b>Duration:</b> 3+ months of freelance work</li>
+                    <li><b>Role:</b> Freelance Developer</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--Skills section-->
+        <section id="skills" class="skills">
+            <div class="container-skills">
+                <h2>Skills</h2>
+                <h3><u>Technical Skills</u></h3>
+                <ul>
+                    <li>HTML, CSS & JavaScript (Proficient)</li>
+                    <li>Git & GitHub</li>
+                    <li>Node.js</li>
+                    <li>Python</li>
+                </ul>
+                <h3><u>Non-Technical Skills</u></h3>
+                <ul>
+                    <li>Communication (Excellent)</li>
+                    <li>Problem-Solving (Highly Skilled)</li>
+                    <li>Teamwork (Ability to Collaborate)</li>
+                    <li>Time Management (Organized and Efficient)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--Projects section-->
+        <section id="projects" class="projects">
+            <div class="container-projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><b>Project 1:</b> Personal Portfolio Website</li>
+                    <li><b>Project 2:</b> E-commerce Web Application</li>
+                    <li><b>Project 3:</b> Blogging Platform</li>
+                    <li><b>Project 4:</b> Expense Tracker Application</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--Contact section-->
+        <section id="contact" class="contact">
+            <div class="container-contacts">
+                <h2>Contact Me</h2>
+                <h3>Social Media Accounts</h3>
+                <a href="https://github.com/Fabby24"><img src="./github.png" alt="GitHub icon for Fabian's profile"></a>
+                <a href="https://www.linkedin.com/in/fabian-musau-0b9709292/"><img src="./linkedin.png" alt="LinkedIn icon for Fabian's profile"></a>
+                <a href="https://x.com/fabby_musa"><img src="./twitter.png" alt="Twitter icon for Fabian's profile"></a>
+            </div>
+        </section>
+
+        <script>
+            // Highlight the active section in the navigation bar
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
